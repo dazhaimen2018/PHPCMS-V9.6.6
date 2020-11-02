@@ -92,7 +92,7 @@ $(function(){
 <option value="/^[0-9a-z]+$/i"><?php echo L('integer_letter');?></option>
 <option value="/^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/">E-mail</option>
 <option value="/^[0-9]{5,20}$/">QQ</option>
-<option value="/^http:\/\//"><?php echo L('hyperlink');?></option>
+<option value="/^http(s?):\/\//"><?php echo L('hyperlink');?></option>
 <option value="/^(1)[0-9]{10}$/"><?php echo L('mobile_number');?></option>
 <option value="/^[0-9-]{6,13}$/"><?php echo L('tel_number');?></option>
 <option value="/^[0-9]{6}$/"><?php echo L('zip');?></option>
