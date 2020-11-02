@@ -112,7 +112,7 @@ $(function(){
 <option value="/^[0-9a-z]+$/i"><?php echo L('integer_letter');?></option>
 <option value="/^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/">E-mail</option>
 <option value="/^[0-9]{5,20}$/">QQ</option>
-<option value="/^http:\/\//"><?php echo L('hyperlink');?></option>
+<option value="/^http(s?):\/\//"><?php echo L('hyperlink');?></option>
 <option value="/^(1)[0-9]{10}$/"><?php echo L('mobile_number');?></option>
 <option value="/^[0-9-]{6,13}$/"><?php echo L('tel_number');?></option>
 <option value="/^[0-9]{6}$/"><?php echo L('zip');?></option>
@@ -132,7 +132,7 @@ $(function(){
         </div>
       </td>
     </tr>
-	<tr<?php if(!$modelid || $modelid==-1) {echo ' style="display: none;"';}?>> 
+	<tr<?php if(!$modelid || $modelid==-1 || $modelid==-2) {echo ' style="display: none;"';}?>> 
       <th><strong><?php echo L('basic_field');?></strong><br /><?php echo L('basic_field_tips');?></th>
       <td>
         <div class="mt-radio-inline">
@@ -141,7 +141,7 @@ $(function(){
         </div>
       </td>
     </tr>
-	<tr<?php if(!$modelid || $modelid==-1) {echo ' style="display: none;"';}?>> 
+	<tr<?php if(!$modelid || $modelid==-1 || $modelid==-2) {echo ' style="display: none;"';}?>> 
       <th><strong><?php echo L('as_search_field');?></strong></th>
       <td>
         <div class="mt-radio-inline">
@@ -150,7 +150,7 @@ $(function(){
         </div>
       </td>
     </tr>
-	<tr<?php if(!$modelid || $modelid==-1) {echo ' style="display: none;"';}?>> 
+	<tr<?php if(!$modelid || $modelid==-1 || $modelid==-2) {echo ' style="display: none;"';}?>> 
       <th><strong><?php echo L('allow_contributor');?></strong></th>
       <td>
         <div class="mt-radio-inline">
@@ -159,7 +159,7 @@ $(function(){
         </div>
       </td>
     </tr>
-	<tr<?php if(!$modelid || $modelid==-1) {echo ' style="display: none;"';}?>> 
+	<tr<?php if(!$modelid || $modelid==-1 || $modelid==-2) {echo ' style="display: none;"';}?>> 
       <th><strong><?php echo L('as_fulltext_field');?></strong></th>
       <td>
         <div class="mt-radio-inline">
@@ -168,7 +168,7 @@ $(function(){
         </div>
       </td>
     </tr>
-	<tr<?php if(!$modelid || $modelid==-1) {echo ' style="display: none;"';}?>> 
+	<tr<?php if(!$modelid || $modelid==-1 || $modelid==-2) {echo ' style="display: none;"';}?>> 
       <th><strong><?php echo L('as_omnipotent_field');?></strong><br><?php echo L('as_omnipotent_field_tips');?></th>
       <td>
         <div class="mt-radio-inline">
@@ -178,7 +178,7 @@ $(function(){
         </div>
       </td>
     </tr>
-	<tr<?php if(!$modelid || $modelid==-1) {echo ' style="display: none;"';}?>> 
+	<tr<?php if(!$modelid || $modelid==-1 || $modelid==-2) {echo ' style="display: none;"';}?>> 
       <th><strong><?php echo L('as_postion_info');?></strong></th>
       <td>
         <div class="mt-radio-inline">
@@ -188,11 +188,11 @@ $(function(){
       </td>
     </tr>
 	
-	<tr<?php if(!$modelid || $modelid==-1) {echo ' style="display: none;"';}?>> 
+	<tr<?php if(!$modelid || $modelid==-1 || $modelid==-2) {echo ' style="display: none;"';}?>> 
       <th><strong><?php echo L('disabled_groups_field');?></strong></th>
       <td><?php echo form::checkbox($grouplist,$unsetgroupids,'name="unsetgroupids[]" id="unsetgroupids"',0,'100');?></td>
     </tr>
-	<tr<?php if(!$modelid || $modelid==-1) {echo ' style="display: none;"';}?>> 
+	<tr<?php if(!$modelid || $modelid==-1 || $modelid==-2) {echo ' style="display: none;"';}?>> 
       <th><strong><?php echo L('disabled_role_field');?></strong></th>
       <td><?php echo form::checkbox($roles,$unsetroleids,'name="unsetroleids[]" id="unsetroleids"',0,'100');?> </td>
     </tr>
